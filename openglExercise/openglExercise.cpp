@@ -6,10 +6,11 @@
 #include "Icosahedron.h"
 #include "Cube.h"
 #include "Mode.h"
+#include "Clip.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	Base& test = Mode();
+	Base& test = Clip();
 
 	glutInit(&argc,argv);
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
@@ -20,6 +21,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	glutDisplayFunc(test.warper_display());
 	glutReshapeFunc(test.warper_reshape());
 	glutMouseFunc(test.warper_mouse());
+	glutKeyboardFunc(test.warper_keyboard());
 	glutMainLoop();
 
 	return 0;

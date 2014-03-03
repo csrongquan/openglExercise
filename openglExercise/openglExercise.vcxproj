@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Clip.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Icosahedron.h" />
     <ClInclude Include="Mode.h" />
@@ -91,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Base.cpp" />
+    <ClCompile Include="Clip.cpp" />
     <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Icosahedron.cpp" />
     <ClCompile Include="Mode.cpp" />

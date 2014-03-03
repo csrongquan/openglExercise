@@ -26,6 +26,11 @@ mouse_func Base::warper_mouse()
 	return Base::mouse;
 }
 
+keyboard_func Base::warper_keyboard()
+{
+	return Base::keyboard;
+}
+
 void Base::init()
 {
 	
@@ -45,3 +50,10 @@ void Base::mouse(int button,int state,int x,int y)
 {
 
 }
+
+void Base::keyboard(unsigned char key,int x,int y)
+{
+	
+}
+
+

@@ -42,6 +42,9 @@
     <ClInclude Include="Mode.h">
       <Filter>源文件\Mode</Filter>
     </ClInclude>
+    <ClInclude Include="Clip.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -61,6 +64,9 @@
     </ClCompile>
     <ClCompile Include="Mode.cpp">
       <Filter>源文件\Mode</Filter>
+    </ClCompile>
+    <ClCompile Include="Clip.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

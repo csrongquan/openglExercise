@@ -14,6 +14,7 @@ Mode::~Mode()
 void Mode::init()
 {
 	glClearColor(0.0,0.0,0.0,0.0);
+	glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
 }
 
 display_func Mode::warper_display()
@@ -25,11 +26,11 @@ void Mode::display()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	//glLoadIdentity();
+	glLoadIdentity();
 	glColor3f(1.0,1.0,1.0);
 	draw_triangle();
 
-	/*glEnable(GL_LINE_STIPPLE);
+	glEnable(GL_LINE_STIPPLE);
 	glLineStipple(1,0xF0F0);
 	glLoadIdentity();
 	glTranslated(-20.0,0.0,0.0);
@@ -44,7 +45,7 @@ void Mode::display()
 	glLoadIdentity();
 	glRotatef(90.0,0.0,0.0,1.0);
 	draw_triangle();
-	glDisable(GL_LINE_STIPPLE);*/
+	glDisable(GL_LINE_STIPPLE);
 
 	glFlush();
 }
@@ -53,12 +54,9 @@ void Mode::draw_triangle()
 {
 	glBegin(GL_TRIANGLES);
 
-	//glVertex3f(20.0,0.0,0.0);
-	//glVertex3f(0.0,30.0,0.0);
-	//glVertex3f(-20.0,0.0,0.0);
-	glVertex2f(0.0,0.0);
-	glVertex2f(10.0,0.0);
-	glVertex2f(5.0,10.0);
+	glVertex2f(-0.3,-0.3);
+	glVertex2f(0.3,-0.3);
+	glVertex2f(0.0,0.3);
 
 	glEnd();
 }
