@@ -55,10 +55,10 @@
       <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>NotSet</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalOptions>/ENTRY:mainCRTStartup %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glut32.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -82,29 +82,41 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Alpha.h" />
+    <ClInclude Include="Alpha3D.h" />
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Blendeqn.h" />
     <ClInclude Include="Clip.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Icosahedron.h" />
+    <ClInclude Include="Light.h" />
     <ClInclude Include="Mode.h" />
     <ClInclude Include="planet.h" />
     <ClInclude Include="Robot.h" />
+    <ClInclude Include="Smooth.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Unproject.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Alpha.cpp" />
+    <ClCompile Include="Alpha3D.cpp" />
     <ClCompile Include="Base.cpp" />
+    <ClCompile Include="Blendeqn.cpp" />
     <ClCompile Include="Clip.cpp" />
     <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Icosahedron.cpp" />
+    <ClCompile Include="Light.cpp" />
     <ClCompile Include="Mode.cpp" />
     <ClCompile Include="planet.cpp" />
     <ClCompile Include="openglExercise.cpp" />
     <ClCompile Include="Robot.cpp" />
+    <ClCompile Include="Smooth.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Unproject.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

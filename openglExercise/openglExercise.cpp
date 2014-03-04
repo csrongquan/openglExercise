@@ -9,14 +9,21 @@
 #include "Clip.h"
 #include "planet.h"
 #include "Robot.h"
+#include "Unproject.h"
+#include "Smooth.h"
+#include "Light.h"
+#include "Blendeqn.h"
+#include "Alpha.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	Base& test = Robot();
+	Base& test = Alpha();
 
 	glutInit(&argc,argv);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 	//glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+	//glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
+	//glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 	glutInitWindowSize(500,500);
 	glutInitWindowPosition(100,100);
 	glutCreateWindow(argv[0]);
