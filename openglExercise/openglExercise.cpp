@@ -7,13 +7,16 @@
 #include "Cube.h"
 #include "Mode.h"
 #include "Clip.h"
+#include "planet.h"
+#include "Robot.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	Base& test = Clip();
+	Base& test = Robot();
 
 	glutInit(&argc,argv);
-	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	//glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 	glutInitWindowSize(500,500);
 	glutInitWindowPosition(100,100);
 	glutCreateWindow(argv[0]);
