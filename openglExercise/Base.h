@@ -1,6 +1,7 @@
 #ifndef BASE
 #define BASE
 
+#include <gl/glew.h>
 #include <GL/glut.h>
 
 typedef void (*display_func)();
